@@ -19,7 +19,7 @@ services:
     image: redpencil/virtuoso:1.1.0
     environment:
       SPARQL_UPDATE: "true"
-      DEFAULT_GRAPH: "http://mu.semte.ch/application"
+      DEFAULT_GRAPH: "http://mu.semte.ch/examples/hardware"
     ports:
       - "8890:8890"
     volumes:
