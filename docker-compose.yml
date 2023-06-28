@@ -16,7 +16,7 @@ services:
     volumes:
       - ./config/dispatcher:/config
   database:
-    image: redpencil/virtuoso@sha256:3e1955b7bce2fc4b4c81bc9a15d70e7c9c8de53a94398f1c2848b134501957fe
+    image: redpencil/virtuoso@sha256:5693311663f14e08dc536f6e6b4d4e6aab70ce3f1b68afcdd26efe30b977f48c
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/examples/hardware"
