@@ -27,6 +27,8 @@ services:
       - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
   hardware:
     image: semtech/mu-cl-resources:1.22.2
+    environment:
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/examples/hardware"
     links:
       - database:database
     volumes:
