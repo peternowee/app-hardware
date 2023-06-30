@@ -5,8 +5,8 @@
   :properties `((:name :string ,(s-prefix "schema:name")))
   :has-many `((individual-product :via ,(s-prefix "schema:owns")
                                   :as "individual-products"))
-  :resource-base (s-url "http://mu.semte.ch/examples/hardware/persons/")
-  :on-path "persons")
+  :resource-base (s-url "http://mu.semte.ch/examples/hardware/people/")
+  :on-path "people")
 
 (define-resource individual-product ()
   :class (s-prefix "schema:IndividualProduct")
