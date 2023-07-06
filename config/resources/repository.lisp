@@ -15,7 +15,7 @@
 ;; (add-prefix "dct" "http://purl.org/dc/terms/")
 (add-prefix "schema" "http://schema.org/")
 (add-prefix "foaf" "http://xmlns.com/foaf/0.1/")
-
+(add-prefix "xsd" "http://www.w3.org/2001/XMLSchema#")
 
 ;;;;;
 ;; The following is the commented out version of those used in the
