@@ -23,9 +23,9 @@
   :class (s-prefix "ext:Transaction")
   :properties `((:datetime :datetime ,(s-prefix "xsd:dateTime")))
   :has-one `((person :via ,(s-prefix "ext:newOwner")
-                     :as "person")
+                     :as "new-owner")
              (individual-product :via ,(s-prefix "ext:receivedProduct")
-                                 :as "individual-product"))
+                                 :as "received-product"))
   :resource-base (s-url "http://mu.semte.ch/examples/hardware/transactions/")
   :on-path "transactions")
 
