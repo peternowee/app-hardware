@@ -1,0 +1,72 @@
+@base <http://mu.semte.ch/examples/hardware/> .
+
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema:	<http://schema.org/> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix mu:	<http://mu.semte.ch/vocabularies/core/> .
+@prefix ext:	<http://mu.semte.ch/vocabularies/ext/> .
+
+<people/64A68A6AB3020C92BA8D9DE4>	rdf:type	schema:Person ;
+	mu:uuid	"64A68A6AB3020C92BA8D9DE4" ;
+	schema:name	"Alice" .
+<people/64AD5C7EE1F55D5CE0009FE5>	rdf:type	schema:Person ;
+	mu:uuid	"64AD5C7EE1F55D5CE0009FE5" ;
+	schema:name	"Grace" .
+<people/64B56AFD0524196188F17564>	rdf:type	schema:Person ;
+	mu:uuid	"64B56AFD0524196188F17564" ;
+	schema:name	"Bob" .
+<people/64B56B000524196188F17565>	rdf:type	schema:Person ;
+	mu:uuid	"64B56B000524196188F17565" ;
+	schema:name	"Carol" .
+
+<individual-products/64A8033BDDF042E61F69B2C0>	rdf:type	schema:IndividualProduct ;
+	mu:uuid	"64A8033BDDF042E61F69B2C0" ;
+	schema:name	"Red Samsung portable SSD T7 1TB" ;
+	schema:serialNumber	"S99XYZ98765432N" .
+<individual-products/64A8036EDDF042E61F69B2C4>	rdf:type	schema:IndividualProduct ;
+	mu:uuid	"64A8036EDDF042E61F69B2C4" ;
+	schema:name	"Blue Samsung portable SSD T5 2TB" ;
+	schema:serialNumber	"S99XYZ01234567N" .
+<individual-products/64B567F00524196188F1755D>	rdf:type	schema:IndividualProduct ;
+	mu:uuid	"64B567F00524196188F1755D" ;
+	schema:name	"Samsung 32GB SODIMM" ;
+	schema:serialNumber	"S0CAAS0123456789A5" .
+<individual-products/64B568110524196188F1755E>	rdf:type	schema:IndividualProduct ;
+	mu:uuid	"64B568110524196188F1755E" ;
+	schema:name	"Samsung 32GB SODIMM" ;
+	schema:serialNumber	"S0CAAS0123456790A6" .
+<individual-products/64B56A4E0524196188F17563>	rdf:type	schema:IndividualProduct ;
+	mu:uuid	"64B56A4E0524196188F17563" ;
+	schema:name	"crucial 16GB DDR4-3200 SODIMM" ;
+	schema:serialNumber	"B012345678.00002" .
+
+<transactions/64ABCE962368FFBD0A0EE13A>	rdf:type	ext:Transaction ;
+	mu:uuid	"64ABCE962368FFBD0A0EE13A" ;
+	xsd:dateTime	"2022-12-31T23:00:00Z"^^xsd:dateTime ;
+	ext:newOwner	<people/64A68A6AB3020C92BA8D9DE4> ;
+	ext:receivedProduct	<individual-products/64A8036EDDF042E61F69B2C4> .
+<transactions/64B16A55CD8DB312CEC9FA31>	rdf:type	ext:Transaction ;
+	mu:uuid	"64B16A55CD8DB312CEC9FA31" ;
+	xsd:dateTime	"2023-02-02T00:00:00Z"^^xsd:dateTime ;
+	ext:newOwner	<people/64AD5C7EE1F55D5CE0009FE5> ;
+	ext:receivedProduct	<individual-products/64A8036EDDF042E61F69B2C4> .
+<transactions/64B64059C4C8771AEB5D179E>	rdf:type	ext:Transaction ;
+	xsd:dateTime	"2023-02-02T00:00:00Z"^^xsd:dateTime ;
+	mu:uuid	"64B64059C4C8771AEB5D179E" ;
+	ext:newOwner	<people/64A68A6AB3020C92BA8D9DE4> ;
+	ext:receivedProduct	<individual-products/64A8033BDDF042E61F69B2C0> .
+<transactions/64B640C0C4C8771AEB5D17A0>	rdf:type	ext:Transaction ;
+	xsd:dateTime	"2023-01-02T11:00:00Z"^^xsd:dateTime ;
+	mu:uuid	"64B640C0C4C8771AEB5D17A0" ;
+	ext:newOwner	<people/64A68A6AB3020C92BA8D9DE4> ;
+	ext:receivedProduct	<individual-products/64B567F00524196188F1755D> .
+<transactions/64B640E8C4C8771AEB5D17A1>	rdf:type	ext:Transaction ;
+	xsd:dateTime	"2023-01-02T11:00:00Z"^^xsd:dateTime ;
+	mu:uuid	"64B640E8C4C8771AEB5D17A1" ;
+	ext:newOwner	<people/64AD5C7EE1F55D5CE0009FE5> ;
+	ext:receivedProduct	<individual-products/64B568110524196188F1755E> .
+<transactions/64B6412BC4C8771AEB5D17A2>	rdf:type	ext:Transaction ;
+	xsd:dateTime	"2023-03-01T14:00:00Z"^^xsd:dateTime ;
+	mu:uuid	"64B6412BC4C8771AEB5D17A2" ;
+	ext:newOwner	<people/64B56B000524196188F17565> ;
+	ext:receivedProduct	<individual-products/64B567F00524196188F1755D> .
