@@ -20,15 +20,15 @@ defmodule Dispatcher do
   # this file.
 
   match "/individual-products/*path" do
-    Proxy.forward conn, path, "http://hardware/individual-products/"
+    Proxy.forward conn, path, "http://resource/individual-products/"
   end
 
   match "/people/*path" do
-    Proxy.forward conn, path, "http://hardware/people/"
+    Proxy.forward conn, path, "http://resource/people/"
   end
 
   match "/transactions/*path" do
-    Proxy.forward conn, path, "http://hardware/transactions/"
+    Proxy.forward conn, path, "http://resource/transactions/"
   end
 
   match "/*_", %{ last_call: true } do

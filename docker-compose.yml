@@ -12,9 +12,17 @@ services:
   dispatcher:
     image: semtech/mu-dispatcher:2.1.0-beta.2
     links:
-      - hardware:hardware
+      - resource:resource
     volumes:
       - ./config/dispatcher:/config
+  resource:
+    image: semtech/mu-cl-resources:1.22.2
+    environment:
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/examples/hardware"
+    links:
+      - database:database
+    volumes:
+      - ./config/resources:/config
   database:
     image: redpencil/virtuoso@sha256:4c3fa72de6e24bdeb17f23c8f9f31e4aea0f1ae952c83151414d9537a029680e
     environment:
@@ -25,11 +33,3 @@ services:
     volumes:
       - ./data/db:/data
       - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
-  hardware:
-    image: semtech/mu-cl-resources:1.22.2
-    environment:
-      MU_APPLICATION_GRAPH: "http://mu.semte.ch/examples/hardware"
-    links:
-      - database:database
-    volumes:
-      - ./config/resources:/config
