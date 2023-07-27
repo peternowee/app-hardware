@@ -44,3 +44,11 @@ services:
     volumes:
       - ./data/db:/data
       - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0
+    environment:
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/examples/hardware"
+    links:
+      - triplestore:database
+    volumes:
+      - ./config/migrations:/data/migrations
