@@ -1,0 +1,21 @@
+PREFIX schema: <http://schema.org/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+DELETE {
+  GRAPH  <http://mu.semte.ch/examples/hardware> {
+    ?s ?p ?o .
+  }
+} INSERT {
+  GRAPH  <http://mu.semte.ch/graphs/public> {
+    ?s ?p ?o .
+  }
+} WHERE {
+  GRAPH  <http://mu.semte.ch/examples/hardware> {
+    ?s a ?type ; ?p ?o .
+    VALUES ?type {
+        schema:Person
+        schema:IndividualProduct
+        ext:Transaction
+    }
+  }
+}
