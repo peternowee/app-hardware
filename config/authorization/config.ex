@@ -22,7 +22,7 @@ defmodule Acl.UserGroups.Config do
                       resource_types: [
                         "http://schema.org/Person",
                         "http://schema.org/IndividualProduct",
-                        "http://mu.semte.ch/vocabularies/ext/Transaction",
+                        "http://schema.org/ReceiveAction",
                       ],
                       inverse_predicates: %AllPredicates{}
                     } } ] },
