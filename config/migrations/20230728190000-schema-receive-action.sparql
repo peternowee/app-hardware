@@ -1,0 +1,47 @@
+PREFIX schema: <http://schema.org/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+DELETE {
+  GRAPH ?g { ?s xsd:dateTime ?o . }
+} INSERT {
+  GRAPH ?g { ?s schema:startTime ?o . }
+} WHERE {
+  GRAPH ?g { ?s xsd:dateTime ?o . }
+}
+;
+
+PREFIX schema: <http://schema.org/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+DELETE {
+  GRAPH ?g { ?s ext:newOwner ?o . }
+} INSERT {
+  GRAPH ?g { ?s schema:agent ?o . }
+} WHERE {
+  GRAPH ?g { ?s ext:newOwner ?o . }
+}
+;
+
+PREFIX schema: <http://schema.org/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+DELETE {
+  GRAPH ?g { ?s ext:receivedProduct ?o . }
+} INSERT {
+  GRAPH ?g { ?s schema:object ?o . }
+} WHERE {
+  GRAPH ?g { ?s ext:receivedProduct ?o . }
+}
+;
+
+PREFIX schema: <http://schema.org/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+DELETE {
+  GRAPH ?g { ?s ?p ext:Transaction . }
+} INSERT {
+  GRAPH ?g { ?s ?p schema:ReceiveAction . }
+} WHERE {
+  GRAPH ?g { ?s ?p ext:Transaction . }
+}
+;
