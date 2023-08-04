@@ -21,6 +21,8 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
 
+  # Resource service
+
   match "/individual-products/*path" do
     Proxy.forward conn, path, "http://resource/individual-products/"
   end
@@ -31,6 +33,12 @@ defmodule Dispatcher do
 
   match "/transactions/*path" do
     Proxy.forward conn, path, "http://resource/transactions/"
+  end
+
+  # Other services
+
+  match "/count/*path" do
+    Proxy.forward conn, path, "http://count/count/"
   end
 
   match "/*_", %{ layer: :not_found } do
