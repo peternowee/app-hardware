@@ -13,5 +13,3 @@ services:
       - "9229:9229"
     environment:
       NODE_ENV: "development"
-    volumes:
-      - ../count-service/:/app/
