@@ -37,7 +37,7 @@ services:
     labels:
       - "logging=true"
   triplestore:
-    image: redpencil/virtuoso@sha256:4c3fa72de6e24bdeb17f23c8f9f31e4aea0f1ae952c83151414d9537a029680e
+    image: redpencil/virtuoso:1.2.0-rc.1
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/examples/hardware"
