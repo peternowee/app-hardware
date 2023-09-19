@@ -56,3 +56,9 @@ services:
     build: https://github.com/peternowee/count-service.git#v0.2.0
     links:
       - database:database
+  file:
+    image: semtech/mu-file-service:3.3.0
+    links:
+      - database:database
+    volumes:
+      - ./data/files:/share
