@@ -23,6 +23,7 @@ defmodule Acl.UserGroups.Config do
                         "http://schema.org/Person",
                         "http://schema.org/IndividualProduct",
                         "http://schema.org/ReceiveAction",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                       ],
                       inverse_predicates: %AllPredicates{}
                     } } ] },

@@ -12,19 +12,13 @@
 ;; (s-url "http://purl.org/dc/terms/title")
 ;; as (s-prefix "dct:title")
 
-;; (add-prefix "dct" "http://purl.org/dc/terms/")
-(add-prefix "schema" "http://schema.org/")
+(add-prefix "dct" "http://purl.org/dc/terms/")
+(add-prefix "dbpedia" "http://dbpedia.org/ontology/")
 (add-prefix "foaf" "http://xmlns.com/foaf/0.1/")
+(add-prefix "nfo" "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#")
+(add-prefix "nie" "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#")
+(add-prefix "schema" "http://schema.org/")
 (add-prefix "xsd" "http://www.w3.org/2001/XMLSchema#")
-
-;;;;;
-;; The following is the commented out version of those used in the
-;; commented out domain.lisp.
-
-;; (add-prefix "dcat" "http://www.w3.org/ns/dcat#")
-;; (add-prefix "dct" "http://purl.org/dc/terms/")
-;; (add-prefix "skos" "http://www.w3.org/2004/02/skos/core#")
-
 
 ;;;;;
 ;; You can use the ext: prefix when you're still searching for
