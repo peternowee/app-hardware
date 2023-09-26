@@ -41,7 +41,19 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://count/count/"
   end
 
-  match "/files/*path" do
+  get "/files/:id/download" do
+    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+  get "/files/*path" do
+    Proxy.forward conn, path, "http://resource/files/"
+  end
+  patch "/files/*path" do
+    Proxy.forward conn, path, "http://resource/files/"
+  end
+  post "/files/*path" do
+    Proxy.forward conn, path, "http://file/files/"
+  end
+  delete "/files/*path" do
     Proxy.forward conn, path, "http://file/files/"
   end
 
