@@ -44,7 +44,8 @@
                 (:format :string ,(s-prefix "dct:format"))
                 (:size :number ,(s-prefix "nfo:fileSize"))
                 (:extension :string ,(s-prefix "dbpedia:fileExtension"))
-                (:created :datetime ,(s-prefix "dct:created")))
+                (:created :datetime ,(s-prefix "dct:created"))
+                (:modified :datetime ,(s-prefix "dct:modified")))
   :has-one `((file :via ,(s-prefix "nie:dataSource")
                    :inverse t
                    :as "download"))
