@@ -35,6 +35,12 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/transactions/"
   end
 
+  # virus-scanner-service
+
+  match "/virus-scanner/*path" do
+    Proxy.forward conn, path, "http://virus-scanner/virus-scanner/"
+  end
+
   # Other services
 
   match "/count/*path" do

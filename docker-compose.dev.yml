@@ -9,3 +9,5 @@ services:
       - "8890:8890"
 # count:
 # Set in local docker-compose.override.yml. See count-service README.
+# virus-scanner:
+# Set in local docker-compose.override.yml. See virus-scanner-service README.
