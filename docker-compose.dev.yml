@@ -7,9 +7,5 @@ services:
   triplestore:
     ports:
       - "8890:8890"
-  count:
-    ports:
-      - "8888:80"
-      - "9229:9229"
-    environment:
-      NODE_ENV: "development"
+# count:
+# Set in local docker-compose.override.yml. See count-service README.
