@@ -53,7 +53,8 @@ services:
     volumes:
       - ./config/migrations:/data/migrations
   count:
-    build: https://github.com/peternowee/count-service.git#v0.2.0
+    image: count-service:0.2.1
+    build: https://github.com/peternowee/count-service.git#v0.2.1
     links:
       - database:database
   file:
