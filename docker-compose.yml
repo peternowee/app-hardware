@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   identifier:
-    image: semtech/mu-identifier:1.9.1
+    image: semtech/mu-identifier:1.10.1
     environment:
       SESSION_COOKIE_SECURE: "on"
     links:
@@ -13,14 +13,6 @@ services:
       - resource:resource
     volumes:
       - ./config/dispatcher:/config
-  resource:
-    image: semtech/mu-cl-resources:1.22.2
-    environment:
-      MU_APPLICATION_GRAPH: "http://mu.semte.ch/examples/hardware"
-    links:
-      - database:database
-    volumes:
-      - ./config/resources:/config
   database:
     image: semtech/mu-authorization:0.6.0-beta.8
     environment:
@@ -44,6 +36,14 @@ services:
     volumes:
       - ./data/db:/data
       - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
+  resource:
+    image: semtech/mu-cl-resources:1.22.2
+    environment:
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/examples/hardware"
+    links:
+      - database:database
+    volumes:
+      - ./config/resources:/config
   migrations:
     image: semtech/mu-migrations-service:0.8.0
     environment:
