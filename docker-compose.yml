@@ -68,3 +68,5 @@ services:
     build: https://github.com/peternowee/virus-scanner-service.git#v0.0.2
     links:
       - database:database
+    volumes:
+      - ./data/files:/share
