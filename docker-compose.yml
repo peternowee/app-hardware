@@ -70,9 +70,15 @@ services:
     volumes:
       - ./data/files:/share
   virus-scanner:
-    image: virus-scanner-service:0.0.4
-    build: https://github.com/peternowee/virus-scanner-service.git#v0.0.4
+    image: virus-scanner-service:0.0.5
+    build: https://github.com/peternowee/virus-scanner-service.git#v0.0.5
     links:
       - database:database
     volumes:
       - ./data/files:/share
+      - type: volume
+        source: virus-scanner-signatures
+        target: /var/lib/clamav
+
+volumes:
+  virus-scanner-signatures:
