@@ -58,13 +58,7 @@ services:
     links:
       - database:database
   file:
-    #image: semtech/mu-file-service:3.3.1
-    # https://hub.docker.com/layers/semtech/mu-file-service/latest/images/sha256-6092d94359e945fe2d809a623ddcc27ce4601b1f7f128b4476c91c44b55822d4?context=explore
-    # is semtech/mu-file-service:latest as of 20231005 18:48 and has:
-    # LABEL org.opencontainers.image.revision=a24ec2a9fc738cdd663e6d13ce204a86386d9b47
-    # https://github.com/mu-semtech/file-service/tree/a24ec2a9fc738cdd663e6d13ce204a86386d9b47
-    # is v3.3.1 + Fix invalid DELETE SPARQL query (a24ec2a9 20231005 18:47)
-    image: semtech/mu-file-service@sha256:6092d94359e945fe2d809a623ddcc27ce4601b1f7f128b4476c91c44b55822d4
+    image: semtech/mu-file-service:3.3.2
     links:
       - database:database
     volumes:
