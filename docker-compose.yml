@@ -64,10 +64,12 @@ services:
     volumes:
       - ./data/files:/share
   virus-scanner:
-    image: virus-scanner-service:0.0.5
-    build: https://github.com/peternowee/virus-scanner-service.git#v0.0.5
+    image: virus-scanner-service:0.0.6
+    build: https://github.com/peternowee/virus-scanner-service.git#v0.0.6
     links:
       - database:database
+    environment:
+      VIRUS_SCANNER_CLAMD_USER: # "root" # See README.
     volumes:
       - ./data/files:/share
       - type: volume
