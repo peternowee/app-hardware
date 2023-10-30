@@ -45,7 +45,7 @@ services:
     volumes:
       - ./config/resources:/config
   migrations:
-    image: semtech/mu-migrations-service:0.8.0
+    image: semtech/mu-migrations-service:0.9.0
     environment:
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/examples/hardware"
     links:
