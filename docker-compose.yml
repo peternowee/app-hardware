@@ -64,8 +64,8 @@ services:
     volumes:
       - ./data/files:/share
   virus-scanner:
-    image: virus-scanner-service:0.0.6
-    build: https://github.com/peternowee/virus-scanner-service.git#v0.0.6
+    image: virus-scanner-service:0.0.7
+    build: https://github.com/peternowee/virus-scanner-service.git#v0.0.7
     links:
       - database:database
     environment:
