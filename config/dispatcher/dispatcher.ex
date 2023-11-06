@@ -38,7 +38,7 @@ defmodule Dispatcher do
   # virus-scanner-service
 
   match "/virus-scanner/*path" do
-    Proxy.forward conn, path, "http://virus-scanner/virus-scanner/"
+    Proxy.forward conn, path, "http://virus-scanner/"
   end
 
   # Other services
