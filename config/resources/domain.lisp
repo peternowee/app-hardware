@@ -47,9 +47,23 @@
   :has-one `((file :via ,(s-prefix "nie:dataSource")
                    :inverse t
                    :as "download"))
+  :has-many `((malware-analysis :via ,(s-prefix "stix:sample_ref")
+                           :inverse t
+                           :as "malware-analyses"))
   :resource-base (s-url "http://mu.semte.ch/services/file-service/files/")
   :features `(include-uri)
   :on-path "files")
+
+(define-resource malware-analysis ()
+  :class (s-prefix "stix:MalwareAnalysis")
+  :properties `((:analysis-started :datetime ,(s-prefix "stix:analysis_started"))
+                (:analysis-ended :datetime ,(s-prefix "stix:analysis_ended"))
+                (:result :string ,(s-prefix "stix:result")))
+  :has-one `((file :via ,(s-prefix "stix:sample_ref")
+                   :as "sample-ref"))
+  :resource-base (s-url "http://data.gift/virus-scanner/analysis/id/")
+  :features `(include-uri)
+  :on-path "malware-analyses")
 
 ;; reading in the domain.json
 (read-domain-file "domain.json")

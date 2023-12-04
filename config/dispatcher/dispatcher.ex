@@ -37,8 +37,11 @@ defmodule Dispatcher do
 
   # virus-scanner-service
 
-  match "/virus-scanner/*path" do
+  match "/virus-scanner/*path", %{ layer: :services } do
     Proxy.forward conn, path, "http://virus-scanner/"
+  end
+  get "/malware-analyses/*path", %{ accept: [ :json ], layer: :services } do
+    Proxy.forward conn, path, "http://resource/malware-analyses/"
   end
 
   # Other services

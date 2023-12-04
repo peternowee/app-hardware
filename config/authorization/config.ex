@@ -24,6 +24,7 @@ defmodule Acl.UserGroups.Config do
                         "http://schema.org/IndividualProduct",
                         "http://schema.org/ReceiveAction",
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
+                        "http://docs.oasis-open.org/cti/ns/stix#MalwareAnalysis",
                       ],
                       inverse_predicates: %AllPredicates{}
                     } } ] },

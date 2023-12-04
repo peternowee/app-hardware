@@ -18,6 +18,7 @@
 (add-prefix "nfo" "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#")
 (add-prefix "nie" "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#")
 (add-prefix "schema" "http://schema.org/")
+(add-prefix "stix" "http://docs.oasis-open.org/cti/ns/stix#")
 (add-prefix "xsd" "http://www.w3.org/2001/XMLSchema#")
 
 ;;;;;
